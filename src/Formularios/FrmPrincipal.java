@@ -22,10 +22,10 @@ public class FrmPrincipal extends javax.swing.JFrame {
     }
 
     
-    PreparedStatement  pps= null;
-    ResultSet rs= null;
-    Conexion con = new Conexion();
-    Connection cn = con.conectar();
+    PreparedStatement  pps= null;//DUDA
+    ResultSet rs= null;//DUDA
+    Conexion con = new Conexion();//DUDA
+    Connection cn = con.conectar();//DUDA
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -38,7 +38,6 @@ public class FrmPrincipal extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         btnRegistrar = new javax.swing.JButton();
         btnOrden = new javax.swing.JButton();
-        btnFactura = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
 
@@ -61,13 +60,6 @@ public class FrmPrincipal extends javax.swing.JFrame {
             }
         });
 
-        btnFactura.setText("Imprimir Factura");
-        btnFactura.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnFacturaActionPerformed(evt);
-            }
-        });
-
         jButton1.setText("Registrar Empleado");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -85,18 +77,18 @@ public class FrmPrincipal extends javax.swing.JFrame {
                 .addGap(46, 46, 46)
                 .addComponent(btnRegistrar)
                 .addGap(45, 45, 45)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel1)
-                    .addComponent(jButton1))
+                .addComponent(jButton1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 28, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnOrden)
-                    .addComponent(btnFactura))
-                .addGap(31, 31, 31))
+                .addComponent(btnOrden)
+                .addGap(37, 37, 37))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel2)
                 .addGap(235, 235, 235))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(185, 185, 185)
+                .addComponent(jLabel1)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -110,9 +102,7 @@ public class FrmPrincipal extends javax.swing.JFrame {
                     .addComponent(btnRegistrar)
                     .addComponent(btnOrden)
                     .addComponent(jButton1))
-                .addGap(103, 103, 103)
-                .addComponent(btnFactura)
-                .addGap(26, 26, 26))
+                .addGap(152, 152, 152))
         );
 
         pack();
@@ -120,7 +110,7 @@ public class FrmPrincipal extends javax.swing.JFrame {
 
     private void btnRegistrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegistrarActionPerformed
         FrmCliente cli = new FrmCliente();
-        cli.show();
+        cli.show();//DUDA
         this.setVisible(false);
         
     }//GEN-LAST:event_btnRegistrarActionPerformed
@@ -130,10 +120,6 @@ public class FrmPrincipal extends javax.swing.JFrame {
         men.show();
         this.setVisible(false);
     }//GEN-LAST:event_btnOrdenActionPerformed
-
-    private void btnFacturaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnFacturaActionPerformed
-        
-    }//GEN-LAST:event_btnFacturaActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         Empleados emp = new Empleados();
@@ -177,7 +163,6 @@ public class FrmPrincipal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnFactura;
     private javax.swing.JButton btnOrden;
     private javax.swing.JButton btnRegistrar;
     private javax.swing.JButton jButton1;
